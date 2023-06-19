@@ -6,8 +6,8 @@ RUN apt-get update -y && \
     apt-get install --no-install-recommends --no-install-suggests -y \
         python3-pip \
         jupyter \
-        jupyter-notebook \
         git \
     && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
+RUN python3 -m pip install jupyterlab --no-cache-dir
